@@ -5,11 +5,11 @@
 
 #container{
     position: absolute;
-    padding: 0px;
+    padding: 0px 0px 0px 0px;
     border: 1px solid red;
     width: var(--menu-bar-width);
     height: 50px;
-    margin: 100px;
+    margin: 20px;
 
 }
 
@@ -19,6 +19,7 @@
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
     transition: all 0.5s linear;
+    top: 20px;
 
 }
 
