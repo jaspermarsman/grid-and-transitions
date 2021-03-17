@@ -3,12 +3,23 @@
     --menu-bar-height: 10px;
 }
 
+#container{
+    position: absolute;
+    padding: 0px;
+    border: 1px solid red;
+    width: var(--menu-bar-width);
+    height: 50px;
+    margin: 100px;
+
+}
+
 #menu {
     background-color: #D84282;
     position: relative;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
-    margin: 100px;
+    transition: all 0.5s linear;
+
 }
 
 #menu::before,
@@ -19,6 +30,9 @@
     background-color: #D84282;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
+    transform: rotate(0deg);
+    transform-origin: left;
+    transition: all 0.5s linear;
 }
 
 #menu::before {
@@ -31,3 +45,17 @@
     left: 0;
 }
 
+#container:hover #menu {
+    background-color: transparent;
+}
+
+#container:hover #menu::after{
+    transform: rotate(-40deg);
+    transform-origin: left;
+
+}
+
+#container:hover #menu::before{
+    transform: rotate(40deg);
+    transform-origin: left;
+}

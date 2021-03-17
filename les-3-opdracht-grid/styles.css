@@ -1,0 +1,53 @@
+.grid-container {
+    background-color: burlywood;
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    padding: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 190px 100px auto 50px;
+    grid-template-areas:
+        "item-a item-c item-c"
+        "item-b item-c item-c"
+        "item-b item-e item-d"
+        "item-b item-e ."
+        "item-f item-f item-f";
+
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: chartreuse;
+}
+
+#item-a {
+    grid-area: item-a;
+    background-color: #D84282;
+}
+
+#item-b {
+    grid-area: item-b;
+    background-color: blue;
+}
+
+#item-c {
+    grid-area: item-c;
+    background-color: blueviolet;
+}
+
+#item-e {
+    grid-area: item-e;
+    background-color: azure;
+}
+
+#item-d {
+    grid-area: item-d;
+    background-color: deeppink;
+}
+
+#item-f {
+    grid-area: item-f;
+    background-color: lightskyblue;
+}
