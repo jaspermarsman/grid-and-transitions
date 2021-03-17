@@ -1,18 +1,34 @@
 .grid-container {
-    background-color: burlywood;
+    background-color: hsl(26, 100%, 92%);
     display: grid;
     row-gap: 16px;
     column-gap: 16px;
     padding: 5px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 190px 100px auto 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
     grid-template-areas:
+        "item-a"
+        "item-b"
+        "item-c"
+        "item-d"
+        "item-e"
+        "."
+        "item-f";
+
+
+}
+
+@media screen and (min-width: 992px){
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-areas:
         "item-a item-c item-c"
         "item-b item-c item-c"
         "item-b item-e item-d"
         "item-b item-e ."
         "item-f item-f item-f";
-
+    }
 }
 
 .grid-item {
@@ -24,30 +40,30 @@
 
 #item-a {
     grid-area: item-a;
-    background-color: #D84282;
+    background-color: hsl(75, 10%, 40%);
 }
 
 #item-b {
     grid-area: item-b;
-    background-color: blue;
+    background-color: hsl(60, 12%, 60%);
 }
 
 #item-c {
     grid-area: item-c;
-    background-color: blueviolet;
+    background-color: hsl(21, 43%, 65%);
 }
 
 #item-e {
     grid-area: item-e;
-    background-color: azure;
+    background-color: hsl(24, 43%, 76%);
 }
 
 #item-d {
     grid-area: item-d;
-    background-color: deeppink;
+    background-color: hsl(60, 12%, 68%);
 }
 
 #item-f {
     grid-area: item-f;
-    background-color: lightskyblue;
+    background-color: hsl(75, 10%, 40%);
 }
